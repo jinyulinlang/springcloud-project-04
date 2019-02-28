@@ -1,10 +1,8 @@
 package com.gao.api;
 
 import java.io.Serializable;
-import java.util.Map;
-import java.util.concurrent.ConcurrentSkipListMap;
 
-public class ResponseModel<K, V extends Object> implements Serializable {
+public class ResponseModel implements Serializable {
     private String responseCode;
     private String responseMsg;
 
@@ -24,22 +22,13 @@ public class ResponseModel<K, V extends Object> implements Serializable {
         this.responseMsg = responseMsg;
     }
 
-    private Map<K, V> map = new ConcurrentSkipListMap<> ();
+    private Object data;
 
-    public Map<K, V> getMap() {
-        return map;
+    public Object getData() {
+        return data;
     }
 
-    public void setMap(Map<K, V> map) {
-        this.map = map;
-    }
-
-    public void put(K key, V value) {
-        map.put (key, value);
-        setMap (map);
-    }
-
-    public V get(K key) {
-        return getMap ().get (key);
+    public void setData(Object data) {
+        this.data = data;
     }
 }

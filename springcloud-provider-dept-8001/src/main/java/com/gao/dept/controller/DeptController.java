@@ -17,7 +17,7 @@ public class DeptController {
     private DeptService deptService;
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public ResponseModel add(@RequestHeader Dept dept) {
+    public ResponseModel add(@RequestBody Dept dept) {
         deptService.add (dept);
         return ResponseUtil.success ();
     }

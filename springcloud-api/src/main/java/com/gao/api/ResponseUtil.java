@@ -42,7 +42,7 @@ public class ResponseUtil {
     private static ResponseModel infomation(String code, String msg, Object data) {
         responseModel.setResponseCode (code);
         responseModel.setResponseMsg (msg);
-        responseModel.put ("data", data);
+        responseModel.setData (data);
         return responseModel;
     }
 

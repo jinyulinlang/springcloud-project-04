@@ -10,6 +10,6 @@
     select * from  dept;
 </select>
     <insert id="addDept" parameterType="Dept">
-        insert into dept(dname, db_source) values  (#(dname),DATABASE());
+        insert into dept(dname, db_source) values  (#{dname},DATABASE());
     </insert>
 </mapper>

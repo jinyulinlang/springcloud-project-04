@@ -9,6 +9,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-api" />
+        <module name="springcloud-project-dept-80" />
         <module name="springcloud-provider-dept-8001" />
       </profile>
     </annotationProcessing>
