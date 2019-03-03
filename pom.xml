@@ -12,12 +12,9 @@
         <module>springcloud-api</module>
         <module>springcloud-provider-dept-8001</module>
         <module>springcloud-project-dept-80</module>
+        <module>springcloud-eureka-7001</module>
     </modules>
-    <!-- <parent>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-parent</artifactId>
-         <version>${springboot.version}</version>
-     </parent>-->
+
     <properties>
         <project.build.sourceencoding>UTF-8</project.build.sourceencoding>
         <project.reporting.outputencoding>UTF-8</project.reporting.outputencoding>
@@ -29,7 +26,13 @@
         <lombok.version>1.16.22</lombok.version>
         <swagger.version>2.6.0</swagger.version>
         <springboot.version>1.5.9.RELEASE</springboot.version>
+
     </properties>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+    </parent>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -95,7 +98,27 @@
     </dependencyManagement>
 
     <build>
+        <finalName>springcloud-project-04</finalName>
+        <resources>
+            <resource>
+                <directory>
+                    src/main/resources
+                </directory>
+                <filtering>
+                    true
+                </filtering>
+            </resource>
+        </resources>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

@@ -5,12 +5,15 @@ import com.gao.api.Dept;
 import com.gao.api.ResponseModel;
 import com.gao.api.ResponseUtil;
 import com.gao.dept.service.DeptService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@Api("swaager測試接口")
 @RequestMapping("/dept")
 public class DeptController {
     @Autowired
@@ -27,6 +30,7 @@ public class DeptController {
         return ResponseUtil.success (deptService.get (id));
     }
 
+    @ApiOperation(value = "獲取全部信息")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseModel list() {
         return ResponseUtil.success (deptService.list ());
