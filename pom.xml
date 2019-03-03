@@ -13,11 +13,11 @@
         <module>springcloud-provider-dept-8001</module>
         <module>springcloud-project-dept-80</module>
     </modules>
-    <!--<parent>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
-        <!--<version>2.0.3.RELEASE</version>-->
-    <!--</parent>-->
+    <!-- <parent>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-parent</artifactId>
+         <version>${springboot.version}</version>
+     </parent>-->
     <properties>
         <project.build.sourceencoding>UTF-8</project.build.sourceencoding>
         <project.reporting.outputencoding>UTF-8</project.reporting.outputencoding>
@@ -28,20 +28,21 @@
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.22</lombok.version>
         <swagger.version>2.6.0</swagger.version>
+        <springboot.version>1.5.9.RELEASE</springboot.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.RELEASE</version>
+                <version>Dalston.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.0.4.RELEASE</version>
+                <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
