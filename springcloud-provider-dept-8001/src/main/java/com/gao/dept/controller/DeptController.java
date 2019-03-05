@@ -7,9 +7,15 @@ import com.gao.api.ResponseUtil;
 import com.gao.dept.service.DeptService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import jdk.nashorn.internal.runtime.JSONFunctions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -18,6 +24,8 @@ import org.springframework.web.bind.annotation.*;
 public class DeptController {
     @Autowired
     private DeptService deptService;
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ResponseModel add(@RequestBody Dept dept) {
@@ -35,5 +43,12 @@ public class DeptController {
     public ResponseModel list() {
         return ResponseUtil.success (deptService.list ());
     }
-
+    @RequestMapping(value = "/discovery", method = RequestMethod.GET)
+    public ResponseModel discovery() {
+        List<String> services = discoveryClient.getServices ();
+        System.out.println ("services==============" + services);
+        List<ServiceInstance> instances = discoveryClient.getInstances ("SPRINGCLOUD-DEPT");
+        instances.forEach (element -> System.out.println (instances.toString ()));
+        return ResponseUtil.success (discoveryClient);
+    }
 }

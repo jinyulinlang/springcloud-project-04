@@ -53,4 +53,16 @@ public class DeptConsumerController {
     public ResponseModel list() {
         return restTemplate.getForObject (REST_URL_PREFIX.concat ("/dept/list"), ResponseModel.class);
     }
+
+    /**
+     * 查找list接口
+     *
+     * @return
+     */
+    @RequestMapping("/dept/discovery")
+    public ResponseModel discovery() {
+        return restTemplate.getForObject (REST_URL_PREFIX.concat ("/dept/discovery"), ResponseModel.class);
+    }
+
+
 }
