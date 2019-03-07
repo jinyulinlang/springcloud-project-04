@@ -17,6 +17,7 @@ public class configbeans {
         return new Docket (DocumentationType.SWAGGER_2).apiInfo (apiInfo ()).select ()
                 // 自行修改为自己的包路径
                 .apis (RequestHandlerSelectors.basePackage ("com.gao.dept.controller")).paths (PathSelectors.any ()).build ();
+
     }
 
     private ApiInfo apiInfo() {
