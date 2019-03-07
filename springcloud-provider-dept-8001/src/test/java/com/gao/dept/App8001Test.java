@@ -8,5 +8,7 @@ public class App8001Test {
         System.out.println ("dagdaga");
         System.out.println ("dagdaga");
         System.out.println ("dagdaga");
+        System.out.println ("dagdaga");
+        System.out.println ("dagdaga");
     }
 }
