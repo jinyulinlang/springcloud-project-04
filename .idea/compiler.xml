@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-api" />
         <module name="springcloud-eureka-7001" />
+        <module name="springcloud-eureka-7002" />
+        <module name="springcloud-eureka-7003" />
         <module name="springcloud-project-dept-80" />
         <module name="springcloud-provider-dept-8001" />
       </profile>
@@ -15,6 +17,9 @@
     <bytecodeTargetLevel>
       <module name="springcloud-api" target="1.8" />
       <module name="springcloud-eureka-7001" target="1.8" />
+      <module name="springcloud-eureka-7002" target="1.8" />
+      <module name="springcloud-eureka-7002 (1)" target="1.8" />
+      <module name="springcloud-eureka-7003" target="1.8" />
       <module name="springcloud-project-04" target="1.8" />
       <module name="springcloud-project-dept-80" target="1.8" />
       <module name="springcloud-provider-dept-8001" target="1.8" />
