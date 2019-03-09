@@ -1,5 +1,5 @@
 server:
-  port: 7005
+  port: 7006
 
 eureka:
   instance:
@@ -9,4 +9,4 @@ eureka:
     register-with-eureka: false
     service-url:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #设置与eureka Server 交互的地址查询服务和注册服务
-      defaultZone: http://eureka7006.com:7006/eureka/,http://eureka7004.com:7004/eureka/
+      defaultZone: http://eureka7005.com:7005/eureka/,http://eureka7004.com:7004/eureka/

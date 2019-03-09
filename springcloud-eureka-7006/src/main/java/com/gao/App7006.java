@@ -1,14 +1,14 @@
-package com.gao.eureka;
+package com.gao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
-
 @SpringBootApplication
 @EnableEurekaServer
-public class App7001 {
+public class App7006 {
     public static void main(String[] args) {
-        SpringApplication.run (App7001.class, args);
+        SpringApplication.run (App7006.class, args);
+
     }
 }

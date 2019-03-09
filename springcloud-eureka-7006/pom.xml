@@ -9,18 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-eureka-7002</artifactId>
+    <artifactId>springcloud-eureka-7006</artifactId>
 
-    <name>springboot-eureka-7002</name>
+    <name>springcloud-eureka-7006</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
-    [
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
@@ -33,6 +33,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>

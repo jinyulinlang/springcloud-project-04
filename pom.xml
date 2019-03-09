@@ -16,6 +16,7 @@
         <module>springcloud-eureka-7004</module>
         <module>springboot-eureka-7002</module>
         <module>springcloud-eureka-7005</module>
+        <module>springcloud-eureka-7006</module>
     </modules>
 
     <properties>
